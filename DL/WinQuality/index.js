@@ -20,7 +20,7 @@ async function runExample() {
 
      let session = new onnx.InferenceSession();
 
-     await session.loadModel("./JacobsSuperCoolDLnet_WineData.onnx");
+     await session.loadModel("JacobsSuperCoolDLnet_WineData.onnx");
      let outputMap = await session.run([tensorX]);
      let outputData = outputMap.get('output1');
 
