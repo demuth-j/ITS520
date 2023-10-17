@@ -33,3 +33,4 @@ async function runExample() {
        <td id="td0">  ${outputData.data[0].toFixed(2)}  </td>
      </tr>
   </table>`;
+}
