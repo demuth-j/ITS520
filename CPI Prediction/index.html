@@ -1,6 +1,6 @@
 <html>
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
   <script src="./index.js"></script>
   
   <style>
@@ -25,7 +25,7 @@
                 height:300px;
         }
         h1{
-                color:green;
+                color:blue;
                 text-align:center;
         }
      
@@ -35,30 +35,220 @@
 </head>
 <body>
   
-  <h1> Wine Quality XGBoost </h1>
+  <h1> CPI Prediction </h1>
   
   
   
   
     <div id = "boxes1">
-         
-              
-  <input type="text" id="box1" value="38"> x1 <br/>
-  <input type="text" id="box2" value="0"> x2 <br/>
-  <input type="text" id="box3" value="300"> x3  <br/>
-  <input type="text" id="box4" value="27">x4 <br/>
-  <input type="text" id="box5" value="7" >x5 <br/>
-  <input type="text" id="box6" value="87618"> x6 <br/>
-  <input type="text" id="box7" value="0"> x7 <br/>
-  <input type="text" id="box8" value="300"> x8  <br/>
-  <input type="text" id="box9" value="27"> x9 <br/>
-  <input type="text" id="box10" value="7" > x10 <br/>
-  <input type="text" id="box11" value="87618"> x11 <br/>
+
+        
+      <input type="text" id="CUUR0000SA0" value="307.671"> CUUR0000SA0 <br/>
+      <input type="text" id="CUUR0000SAA" value="132.786"> CUUR0000SAA <br/>
+      <input type="text" id="CUUR0000SAC" value="224.696"> CUUR0000SAC  <br/>
+      <input type="text" id="CUUR0000SAD" value="125.259"> CUUR0000SAD <br/>
+      <input type="text" id="CUUR0000SAE2"value="74.614"> CUUR0000SAE2 <br/>
+      <input type="text" id="CUUR0000SAF" value="323.262"> CUUR0000SAF  <br/>
+      <input type="text" id="CUUR0000SAH" value="323.964"> CUUR0000SAH <br/>
+      <input type="text" id="CUUR0000SAM" value="549.762"> CUUR0000SAM <br/>
+      <input type="text" id="CUUR0000SAN" value="277.852"> CUUR0000SAN  <br/>
+      <input type="text" id="CUUR0000SAR" value="136.726"> CUUR0000SAR <br/>
+      <input type="text" id="CUUR0000SAS" value="389.278"> CUUR0000SAS <br/>
+      <input type="text" id="CUUR0000SAT" value="270.027"> CUUR0000SAT  <br/>
+      <input type="text" id="CUUR0000SEEE" value="7.056"> CUUR0000SEEE <br/>
+      <input type="text" id="CUUR0000SEHG" value="291.683"> CUUR0000SEHG <br/>
+      <input type="text" id="CUUR0000SEHJ" value="134.962"> CUUR0000SEHJ  <br/>
+      <input type="text" id="CUUR0000SEHK" value="85.561"> CUUR0000SEHK <br/>
+      <input type="text" id="CUUR0000SETA" value="126.347"> CUUR0000SETA <br/>
+
+      <input type="text" id="CUUR0100SA0" value="316.3"> CUUR0100SA0  <br/>
+      <input type="text" id="CUUR0100SA0E" value="278.447"> CUUR0100SA0E <br/>
+      <input type="text" id="CUUR0100SAA" value="135.288"> CUUR0100SAA <br/>
+      <input type="text" id="CUUR0100SAC" value="229.933"> CUUR0100SAC  <br/>
+      <input type="text" id="CUUR0100SAD" value="121.772"> CUUR0100SAD <br/>
+      <input type="text" id="CUUR0100SAF" value="326.009"> CUUR0100SAF <br/>
+      <input type="text" id="CUUR0100SAH" value="339.349"> CUUR0100SAH  <br/>
+      <input type="text" id="CUUR0100SAM" value="548.512"> CUUR0100SAM <br/>
+      <input type="text" id="CUUR0100SAN" value="279.085"> CUUR0100SAN <br/>
+      <input type="text" id="CUUR0100SAR" value="141.088"> CUUR0100SAR  <br/>
+      <input type="text" id="CUUR0100SAS" value="399.275"> CUUR0100SAS <br/>
+      <input type="text" id="CUUR0100SAT" value="263.135"> CUUR0100SAT <br/>
+      <input type="text" id="CUUR0100SETA" value="126.272"> CUUR0100SETA  <br/>
+
+      <input type="text" id="CUUR0110SA0" value="120.315"> CUUR0110SA0 <br/>
+      <input type="text" id="CUUR0110SA0E" value="137.784"> CUUR0110SA0E <br/>
+      <input type="text" id="CUUR0110SAA" value="106.08"> CUUR0110SAA  <br/>
+      <input type="text" id="CUUR0110SAC" value="122.019"> CUUR0110SAC <br/>
+      <input type="text" id="CUUR0110SAD" value="115.981"> CUUR0110SAD <br/>
+      <input type="text" id="CUUR0110SAF" value="127.885"> CUUR0110SAF <br/>
+      <input type="text" id="CUUR0110SAH" value="122.704"> CUUR0110SAH  <br/>
+      <input type="text" id="CUUR0110SAM" value="113.54"> CUUR0110SAM <br/>
+      <input type="text" id="CUUR0110SAN" value="125.369"> CUUR0110SAN <br/>
+      <input type="text" id="CUUR0110SAR" value="108.095"> CUUR0110SAR  <br/>
+      <input type="text" id="CUUR0110SAS" value="119.372"> CUUR0110SAS <br/>
+      <input type="text" id="CUUR0110SAT" value="126.049"> CUUR0110SAT <br/>
+      <input type="text" id="CUUR0110SETA" value="129.315"> CUUR0110SETA  <br/>
+
+      <input type="text" id="CUUR0120SA0" value="121.666"> CUUR0120SA0 <br/>
+      <input type="text" id="CUUR0120SA0E" value="132.798"> CUUR0120SA0E <br/>
+      <input type="text" id="CUUR0120SAA" value="110.09"> CUUR0120SAA  <br/>
+      <input type="text" id="CUUR0120SAC" value="123.423"> CUUR0120SAC <br/>
+      <input type="text" id="CUUR0120SAD" value="121.734"> CUUR0120SAD <br/>
+      <input type="text" id="CUUR0120SAF" value="126.818"> CUUR0120SAF <br/>
+      <input type="text" id="CUUR0120SAH" value="122.026"> CUUR0120SAH  <br/>
+      <input type="text" id="CUUR0120SAM" value="108.364"> CUUR0120SAM <br/>
+      <input type="text" id="CUUR0120SAN" value="124.072"> CUUR0120SAN <br/>
+      <input type="text" id="CUUR0120SAR" value="116.49"> CUUR0120SAR  <br/>
+      <input type="text" id="CUUR0120SAS" value="120.61"> CUUR0120SAS <br/>
+      <input type="text" id="CUUR0120SAT" value="131.849"> CUUR0120SAT <br/>
+      <input type="text" id="CUUR0120SETA" value="133.513"> CUUR0120SETA  <br/>
+
+      <input type="text" id="CUUR0200SA0" value="284.981"> CUUR0200SA0 <br/>
+      <input type="text" id="CUUR0200SA0E" value="254.858"> CUUR0200SA0E <br/>
+      <input type="text" id="CUUR0200SAA" value="122.189"> CUUR0200SAA  <br/>
+      <input type="text" id="CUUR0200SAC" value="217.832"> CUUR0200SAC <br/>
+      <input type="text" id="CUUR0200SAD" value="124.063"> CUUR0200SAD <br/>
+      <input type="text" id="CUUR0200SAF" value="312.133"> CUUR0200SAF <br/>
+      <input type="text" id="CUUR0200SAH" value="281.474"> CUUR0200SAH  <br/>
+      <input type="text" id="CUUR0200SAM" value="549.901"> CUUR0200SAM <br/>
+      <input type="text" id="CUUR0200SAN" value="268.115"> CUUR0200SAN <br/>
+      <input type="text" id="CUUR0200SAR" value="139.08"> CUUR0200SAR  <br/>
+      <input type="text" id="CUUR0200SAS" value="353.822"> CUUR0200SAS <br/>
+      <input type="text" id="CUUR0200SAT" value="261.793"> CUUR0200SAT <br/>
+      <input type="text" id="CUUR0200SETA" value="126.579"> CUUR0200SETA  <br/>
+
+      <input type="text" id="CUUR0230SA0" value="123.157"> CUUR0230SA0 <br/>
+      <input type="text" id="CUUR0230SA0E" value="127.932"> CUUR0230SA0E <br/>
+      <input type="text" id="CUUR0230SAA" value="103.425"> CUUR0230SAA  <br/>
+      <input type="text" id="CUUR0230SAC" value="122.618"> CUUR0230SAC <br/>
+      <input type="text" id="CUUR0230SAD" value="122.027"> CUUR0230SAD <br/>
+      <input type="text" id="CUUR0230SAF" value="128.432"> CUUR0230SAF <br/>
+      <input type="text" id="CUUR0230SAH" value="125.868"> CUUR0230SAH  <br/>
+      <input type="text" id="CUUR0230SAM" value="112.389"> CUUR0230SAM <br/>
+      <input type="text" id="CUUR0230SAN" value="123.157"> CUUR0230SAN <br/>
+      <input type="text" id="CUUR0230SAR" value="115.601"> CUUR0230SAR  <br/>
+      <input type="text" id="CUUR0230SAS" value="123.365"> CUUR0230SAS <br/>
+      <input type="text" id="CUUR0230SAT" value="132.722"> CUUR0230SAT <br/>
+      <input type="text" id="CUUR0230SETA" value="132.148"> CUUR0230SETA  <br/>
+
+      <input type="text" id="CUUR0240SA0" value="124.658"> CUUR0240SA0 <br/>
+      <input type="text" id="CUUR0240SA0E" value="131.281"> CUUR0240SA0E <br/>
+      <input type="text" id="CUUR0240SAA" value="115.213"> CUUR0240SAA  <br/>
+      <input type="text" id="CUUR0240SAC" value="125.412"> CUUR0240SAC <br/>
+      <input type="text" id="CUUR0240SAD" value="123.875"> CUUR0240SAD <br/>
+      <input type="text" id="CUUR0240SAF" value="129.62"> CUUR0240SAF <br/>
+      <input type="text" id="CUUR0240SAH" value="126.957"> CUUR0240SAH  <br/>
+      <input type="text" id="CUUR0240SAM" value="119.728"> CUUR0240SAM <br/>
+      <input type="text" id="CUUR0240SAN" value="126.899"> CUUR0240SAN <br/>
+      <input type="text" id="CUUR0240SAR" value="112.292"> CUUR0240SAR  <br/>
+      <input type="text" id="CUUR0240SAS" value="124.05"> CUUR0240SAS <br/>
+      <input type="text" id="CUUR0240SAT" value="133.853"> CUUR0240SAT <br/>
+      <input type="text" id="CUUR0240SETA" value="132.947"> CUUR0240SETA  <br/>
+
+      <input type="text" id="CUUR0300SA0" value="299.394"> CUUR0300SA0 <br/>
+      <input type="text" id="CUUR0300SA0E" value="256.235"> CUUR0300SA0E <br/>
+      <input type="text" id="CUUR0300SAA" value="143.513"> CUUR0300SAA  <br/>
+      <input type="text" id="CUUR0300SAC" value="222.064"> CUUR0300SAC <br/>
+      <input type="text" id="CUUR0300SAD" value="128.982"> CUUR0300SAD <br/>
+      <input type="text" id="CUUR0300SAF" value="318.3"> CUUR0300SAF <br/>
+      <input type="text" id="CUUR0300SAH" value="304.236"> CUUR0300SAH  <br/>
+      <input type="text" id="CUUR0300SAM" value="520.015"> CUUR0300SAM <br/>
+      <input type="text" id="CUUR0300SAN" value="273.635"> CUUR0300SAN <br/>
+      <input type="text" id="CUUR0300SAR" value="136.498"> CUUR0300SAR  <br/>
+      <input type="text" id="CUUR0300SAS" value="377.319"> CUUR0300SAS <br/>
+      <input type="text" id="CUUR0300SAT" value="269.936"> CUUR0300SAT <br/>
+      <input type="text" id="CUUR0300SETA" value="128.522"> CUUR0300SETA  <br/>
+
+      <input type="text" id="CUUR0350SA0" value="127.15"> CUUR0350SA0 <br/>
+      <input type="text" id="CUUR0350SA0E" value="134.122"> CUUR0350SA0E <br/>
+      <input type="text" id="CUUR0350SAA" value="113.543"> CUUR0350SAA  <br/>
+      <input type="text" id="CUUR0350SAC" value="123.11"> CUUR0350SAC <br/>
+      <input type="text" id="CUUR0350SAD" value="121.221"> CUUR0350SAD <br/>
+      <input type="text" id="CUUR0350SAF" value="127.581"> CUUR0350SAF <br/>
+      <input type="text" id="CUUR0350SAH" value="132.409"> CUUR0350SAH  <br/>
+      <input type="text" id="CUUR0350SAM" value="117.348"> CUUR0350SAM <br/>
+      <input type="text" id="CUUR0350SAN" value="124.667"> CUUR0350SAN <br/>
+      <input type="text" id="CUUR0350SAR" value="117.225"> CUUR0350SAR  <br/>
+      <input type="text" id="CUUR0350SAS" value="129.711"> CUUR0350SAS <br/>
+      <input type="text" id="CUUR0350SAT" value="132.009"> CUUR0350SAT <br/>
+      <input type="text" id="CUUR0350SETA" value="127.448"> CUUR0350SETA  <br/>
+
+      <input type="text" id="CUUR0360SA0" value="123.92"> CUUR0360SA0 <br/>
+      <input type="text" id="CUUR0360SA0E" value="126.259"> CUUR0360SA0E <br/>
+      <input type="text" id="CUUR0360SAA" value="115.5"> CUUR0360SAA  <br/>
+      <input type="text" id="CUUR0360SAC" value="122.266"> CUUR0360SAC <br/>
+      <input type="text" id="CUUR0360SAD" value="121.536"> CUUR0360SAD <br/>
+      <input type="text" id="CUUR0360SAF" value="127.058"> CUUR0360SAF <br/>
+      <input type="text" id="CUUR0360SAH" value="128.194"> CUUR0360SAH  <br/>
+      <input type="text" id="CUUR0360SAM" value="101.38"> CUUR0360SAM <br/>
+      <input type="text" id="CUUR0360SAN" value="122.796"> CUUR0360SAN <br/>
+      <input type="text" id="CUUR0360SAR" value="113.097"> CUUR0360SAR  <br/>
+      <input type="text" id="CUUR0360SAS" value="125.002"> CUUR0360SAS <br/>
+      <input type="text" id="CUUR0360SAT" value="134.192"> CUUR0360SAT <br/>
+      <input type="text" id="CUUR0360SETA" value="128.889"> CUUR0360SETA  <br/>
+
+      <input type="text" id="CUUR0370SA0" value="123.284"> CUUR0370SA0 <br/>
+      <input type="text" id="CUUR0370SA0E" value="133.528"> CUUR0370SA0E <br/>
+      <input type="text" id="CUUR0370SAA" value="105.555"> CUUR0370SAA  <br/>
+      <input type="text" id="CUUR0370SAC" value="122.593"> CUUR0370SAC <br/>
+      <input type="text" id="CUUR0370SAD" value="119.842"> CUUR0370SAD <br/>
+      <input type="text" id="CUUR0370SAF" value="128.896"> CUUR0370SAF <br/>
+      <input type="text" id="CUUR0370SAH" value="125.667"> CUUR0370SAH  <br/>
+      <input type="text" id="CUUR0370SAM" value="114.362"> CUUR0370SAM <br/>
+      <input type="text" id="CUUR0370SAN" value="124.551"> CUUR0370SAN <br/>
+      <input type="text" id="CUUR0370SAR" value="118.081"> CUUR0370SAR  <br/>
+      <input type="text" id="CUUR0370SAS" value="123.715"> CUUR0370SAS <br/>
+      <input type="text" id="CUUR0370SAT" value="132.942"> CUUR0370SAT <br/>
+      <input type="text" id="CUUR0370SETA" value="126.463"> CUUR0370SETA  <br/>
+
+      <input type="text" id="CUUR0400SA0" value="327.708"> CUUR0400SA0 <br/>
+      <input type="text" id="CUUR0400SA0E" value="392.724"> CUUR0400SA0E <br/>
+      <input type="text" id="CUUR0400SAA" value="127.133"> CUUR0400SAA  <br/>
+      <input type="text" id="CUUR0400SAC" value="230.383"> CUUR0400SAC <br/>
+      <input type="text" id="CUUR0400SAD" value="124.73"> CUUR0400SAD <br/>
+      <input type="text" id="CUUR0400SAF" value="336.491"> CUUR0400SAF <br/>
+      <input type="text" id="CUUR0400SAH" value="364.145"> CUUR0400SAH  <br/>
+      <input type="text" id="CUUR0400SAM" value="590.688"> CUUR0400SAM <br/>
+      <input type="text" id="CUUR0400SAN" value="290.857"> CUUR0400SAN <br/>
+      <input type="text" id="CUUR0400SAR" value="131.154"> CUUR0400SAR  <br/>
+      <input type="text" id="CUUR0400SAS" value="417.486"> CUUR0400SAS <br/>
+      <input type="text" id="CUUR0400SAT" value="281.6"> CUUR0400SAT <br/>
+      <input type="text" id="CUUR0400SETA" value="124.069"> CUUR0400SETA  <br/>
+
+      <input type="text" id="CUUR0480SA0" value="129.978"> CUUR0480SA0 <br/>
+      <input type="text" id="CUUR0480SA0E" value="153.363"> CUUR0480SA0E <br/>
+      <input type="text" id="CUUR0480SAA" value="113.503"> CUUR0480SAA  <br/>
+      <input type="text" id="CUUR0480SAC" value="129.222"> CUUR0480SAC <br/>
+      <input type="text" id="CUUR0480SAD" value="118.918"> CUUR0480SAD <br/>
+      <input type="text" id="CUUR0480SAF" value="131.66"> CUUR0480SAF <br/>
+      <input type="text" id="CUUR0480SAH" value="135.963"> CUUR0480SAH  <br/>
+      <input type="text" id="CUUR0480SAM" value="124.908"> CUUR0480SAM <br/>
+      <input type="text" id="CUUR0480SAN" value="134.261"> CUUR0480SAN <br/>
+      <input type="text" id="CUUR0480SAR" value="114.88"> CUUR0480SAR  <br/>
+      <input type="text" id="CUUR0480SAS" value="130.398"> CUUR0480SAS <br/>
+      <input type="text" id="CUUR0480SAT" value="136.34"> CUUR0480SAT <br/>
+      <input type="text" id="CUUR0480SETA" value="122.605"> CUUR0480SETA  <br/>
+
+      <input type="text" id="CUUR0490SA0" value="126.382"> CUUR0490SA0 <br/>
+      <input type="text" id="CUUR0490SA0E" value="166.458"> CUUR0490SA0E <br/>
+      <input type="text" id="CUUR0490SAA" value="110.693"> CUUR0490SAA  <br/>
+      <input type="text" id="CUUR0490SAC" value="126.894"> CUUR0490SAC <br/>
+      <input type="text" id="CUUR0490SAD" value="117.402"> CUUR0490SAD <br/>
+      <input type="text" id="CUUR0490SAF" value="131.03"> CUUR0490SAF <br/>
+      <input type="text" id="CUUR0490SAH" value="127.576"> CUUR0490SAH  <br/>
+      <input type="text" id="CUUR0490SAM" value="120.403"> CUUR0490SAM <br/>
+      <input type="text" id="CUUR0490SAN" value="131.203"> CUUR0490SAN <br/>
+      <input type="text" id="CUUR0490SAR" value="115.929"> CUUR0490SAR  <br/>
+      <input type="text" id="CUUR0490SAS" value="125.981"> CUUR0490SAS <br/>
+      <input type="text" id="CUUR0490SAT" value="135.709"> CUUR0490SAT <br/>
+      <input type="text" id="CUUR0490SETA" value="125.811"> CUUR0490SETA  <br/>
+
+      
 
     </div> 
       
   <div>
-      <input style="background-color:yellow" type="button" value="Run" onclick="runExample()"/>
+      <input style="background-color:grey" type="button" value="Run" onclick="runExample()"/>
    </div>
   
 
