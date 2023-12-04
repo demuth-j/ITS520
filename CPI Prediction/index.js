@@ -219,8 +219,8 @@ async function runExample() {
   predictions.innerHTML = ` <hr> Got an output tensor with values: <br/>
    <table>
      <tr>
-       <td>  Rating of Wine Quality  </td>
-       <td id="td0">  ${outputData.data[0].toFixed(2)}  </td>
+       <td> CPI Prediction  </td>
+       <td id="td0">  ${outputData}  </td>
      </tr>
   </table>`;
 }
