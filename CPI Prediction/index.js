@@ -1,6 +1,6 @@
 async function runExample() {
 
-     var x = new Float32Array(1, 11)
+     var x = new Float32Array(1, 186)
 
      var x = [];
 
@@ -210,11 +210,12 @@ async function runExample() {
      let session = await ort.InferenceSession.create('xgboost_CPIScore.onnx');
 
      let result = await session.run(feeds);
-    let outputData = result.variable.data;
+     let outputData = result.variable.data;
 
     outputData = parseFloat(outputData).toFixed(2)
 
     let predictions = document.getElementById('predictions');
+     
   predictions.innerHTML = ` <hr> Got an output tensor with values: <br/>
    <table>
      <tr>
