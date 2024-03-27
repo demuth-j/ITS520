@@ -1,2 +1,2 @@
 # ITS520
-Machine learning class stuff
+Intro to machine learning (CNNs, NNs, Building Models From Scratch)
